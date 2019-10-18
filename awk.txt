@@ -1,0 +1,57 @@
+awk options program file
+https://likegeeks.com/awk-command/
+
+
+
+awk script will be inside '{}'
+
+Variables in awk
+
+$0 -> whole line
+$1, $2 ..... -> arguments
+
+-F -> used for specifying tab specifier
+
+multiple commands are kept by seperating them with a comma
+
+-f -> switch used for reading awk script from a file
+
+
+
+awk script { my script}
+
+BEGIN used to create a title for script
+
+END used for a ending.
+
+awk ' BEGIN {} {} END {}'
+
+RS
+FS -> specifies input field seperator
+OFS -> specifies output seperator
+ORS 
+
+
+suppose they are field sepeators then we can seperate them based on fieldWidth 
+
+NF -> field count of line
+
+FNR -> record proceessed line no
+
+Variable names could be anything, but it can’t begin with a number.
+
+name = "raki"
+
+
+if() print else 
+
+while( ){
+	sum += ;
+}
+
+for also same syntax as normal for
+
+
+function name(){
+	
+}

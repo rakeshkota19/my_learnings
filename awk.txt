@@ -1,7 +1,8 @@
-awk options program file
 https://likegeeks.com/awk-command/
 
 
+awk options program file
+options -F fs (:, \t)
 
 awk script will be inside '{}'
 
@@ -10,10 +11,10 @@ Variables in awk
 $0 -> whole line
 $1, $2 ..... -> arguments
 
--F -> used for specifying tab specifier
-
 multiple commands are kept by seperating them with a comma
 
+
+-F -> used for specifying tab specifier
 -f -> switch used for reading awk script from a file
 
 

@@ -27,7 +27,11 @@ Commands:
     docker logs -> check the logs 
     docker exec -> to get into the shell of any container
 
+    docker volume list -> lists all the volumes
+    docker volume create name -> create new volume
 
+    docker container inspect container_id
+    docker network inspect bridge
     
     Running:
         
@@ -37,6 +41,8 @@ Commands:
         -it -> interative terminal
 
         docker exec -it continaer_name cmd_name
+
+        docker run --name mysql -p3306:3306 -v mysql-volume:/var/lib/mysql -d mysql/mysql-latest
 
 
 

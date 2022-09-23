@@ -11,7 +11,7 @@
 >   Layers
 
 
-Commands:
+### Commands:
 
     docker images ls -> shows all images in system
     docker ps      -> shows all the running containers

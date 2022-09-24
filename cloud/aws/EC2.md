@@ -1,4 +1,4 @@
-# Elastic Cloud
+# Elastic Cloud -> IAAS
 
 
 > Elastic - Auto Scaling Up/Down based on the number of requests  

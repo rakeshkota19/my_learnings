@@ -26,7 +26,9 @@
 	All inbound traffic is blocked by default  
 	All outbound traffic is authorised by defa  
 	SSH, terminal, use pem file, with 400 permission ( ssh -i .pem ec2@..) or use ec2 connect only.  
-
+	Can be attached to any ec2 instance, rds or elb
+	Reuse for multiple types
+	
 ## Instance Purchasing Types  
 	• On - Demand  : short workload, predictable pricing -> used for short workloads  
 	• Reserved ( 1 and 3 years) : Reserved, Convertible, Scheduled -> used for steady usage apps  
@@ -50,3 +52,10 @@
 
 ## Roles
 	Permissions for instances for accessing others services(S3, EBS..)
+
+### ASG ( Auto Scaling Group)
+	Used for managing auto scaling 
+	Launch templates are defined to create new instance when load becomes high
+		AMI, Instance Type, Security Group, SSH key
+		Script config with user data
+	Scaling based on Cloud Watch Alarms

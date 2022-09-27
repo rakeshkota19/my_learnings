@@ -1,0 +1,46 @@
+---
+AWSTemplateFormatVersion: "2010-09-09"
+
+Description: Simple Custom Resource
+Parameters:
+
+  InputMessage:
+    Type: String
+    Description: An input
+    Default: hi there
+
+  IamInstanceRole:
+    Type: String
+    Description: EC2 instance SSM role
+
+Resources:
+
+  MyCustomResourceFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      Code:
+        ZipFile: |
+          var response = require('cfn-response');
+          var aws = require("aws-sdk");
+          exports.handler = function(event, context) {
+            var input = event.ResourceProperties.InputParameter;
+            var responseData = {msg : "hello world", msg2 : input + "--rec from caller"};
+            response.send(event, context, response.SUCCESS, responseData);
+          };
+      Handler: index.handler
+      Timeout: 30
+      Runtime: nodejs14.x
+      Role: !Ref   IamInstanceRole
+
+  MyCustomResourceCallout:
+    Type: Custom::LambdaCallout
+    Properties:
+      ServiceToken: !GetAtt MyCustomResourceFunction.Arn
+      InputParameter: !Ref InputMessage
+
+Outputs:
+  OutputFromFunction:
+    Value: !GetAtt   MyCustomResourceCallout.msg
+
+  ModifiedInputReturned:
+    Value: !GetAtt   MyCustomResourceCallout.msg2

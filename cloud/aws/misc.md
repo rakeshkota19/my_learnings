@@ -21,5 +21,12 @@
 	Log erros
 	We can install cloud watch agents on our instance.
 
+## Security
 
-
+	Shield
+	WAF
+	GuardDuty - like watchman
+	Inspector - Full scan of our current setup, and tells vulnerabilites
+	Macie - Data security check
+	Cloud Trail - Audit trail of internal changes in AWS
+	Security Hub - Main dashboard showing all security modules

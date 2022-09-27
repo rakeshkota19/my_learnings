@@ -16,7 +16,8 @@
 		Application Load balancer  
 			Routes based on Layer 7  
 			Http Routing Rules  
-			More common 
+			More common  
+			TLS termination on ALB (Normally it happens on the server itself, but we can do it on ALB)
 
 	They also have security group similar to ec2
 	

@@ -44,6 +44,8 @@
 		services
 
 	eb deploy -> to push any change from local to env
+	eb config env_name
+	eb terminate env_name -> tears down all the resources(based on cloud formation)
 
 	logs on ec2 machine for info
 	/var/log -> eb-engine.log (log for startup process) and cfn-init.log( log for .ebextensions command)

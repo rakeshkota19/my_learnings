@@ -2,10 +2,13 @@
 
 
 ### AWS CLI
-	aws configure
+	aws configure - use acceess keys for configuring
 
 	aws s3 ls
 	aws s3 cp src des
+
+	aws ec2 describe-instances
+
 
 ## CI/CD
 

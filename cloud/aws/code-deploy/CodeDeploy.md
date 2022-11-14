@@ -59,6 +59,26 @@
 	2. Systems Manager, go to distributor
 		install codedeploy package on the instance.
 
+	3. Create security group to allow http and acess database
+	4. Create a launch template
+			
+			Launch temlate - set of all decisions that we make while launching instance
+			Set the security group, instace type, iam profile, select the required ami
+	5.  Create a ASG
+			You can select the load balancer, capacity instrcutions and zones you want to create.
+	6. Create a application in Code deploy
+			Create APP
+			Create Deployment Group, telling where code deploy should send the code
+				Select the role		
+				Select the ASG
+				Select inPlace / Blue-Green
+			
+			
+			
+			
+		
+			
+
 
 		
 		
